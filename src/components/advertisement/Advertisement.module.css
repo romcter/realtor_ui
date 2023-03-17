@@ -1,0 +1,162 @@
+.catalog-card {
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0,0,0,.25);
+    border-radius: 8px;
+    padding: 18px 13px;
+    margin-bottom: 12px;
+    display: flex
+}
+
+.catalog-card-media {
+    width: 50%;
+    position: relative;
+    padding-right: 9px;
+}
+
+.catalog-card-images {
+    position: relative;
+    display: block;
+    height: 332px;
+    overflow: hidden;
+}
+
+.offer-photo-slider .offer-photo-slider-slides-container {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: none;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+input::placeholder {
+    color: #999;
+    opacity: 1;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.offer-photo-slider {
+    position: relative;
+    height: 100%;
+}
+.offer-photo-slider .offer-photo-slider-blurred-bg {
+    filter: blur(50px);
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.offer-photo-slider .offer-photo-slider-slides-container {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: none;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+}
+.offer-photo-slider .offer-photo-slider-slides-container::-webkit-scrollbar {
+    display: none;
+}
+.offer-photo-slider .offer-photo-slider-slides-container .offer-photo-slider-slide {
+    font-size: 30px;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    -webkit-user-drag: none;
+    user-select: none;
+    flex: none;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+.offer-photo-slider .offer-photo-slider-slides-container .offer-photo-slider-slide .offer-photo-slider-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.offer-photo-slider .offer-photo-slider-dots-container {
+    max-width: 68px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+}
+.offer-photo-slider .offer-photo-slider-dots-container .offer-photo-slider-dots-track {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 4px;
+    transform: translateX(min(-10px * (var(--current-slide-index, 0) - 2), 0px));
+    transition: transform var(--transition-duration-short, 0) cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.offer-photo-slider .offer-photo-slider-dots-container .offer-photo-slider-dot {
+    min-width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0.75);
+    transition: transform var(--transition-duration-short, 0) cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.offer-photo-slider .offer-photo-slider-dots-container .offer-photo-slider-dot.-active {
+    background: #fff;
+    transform: scale(1);
+}
+.offer-photo-slider .offer-photo-slider-dots-container .offer-photo-slider-dot.-edge {
+    transform: scale(0.5);
+}
+.offer-photo-slider .offer-photo-slider-attributes {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    gap: 12px;
+}
+.offer-photo-slider .offer-photo-slider-attributes .offer-photo-slider-images-counter {
+    display: flex;
+    align-items: center;
+}
+.offer-photo-slider .offer-photo-slider-attributes .offer-photo-slider-images-counter .offer-photo-slider-images-counter-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+.offer-photo-slider .offer-photo-slider-attributes .offer-photo-slider-images-counter .offer-photo-slider-images-counter-count {
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+.offer-photo-slider .offer-photo-slider-attributes .offer-photo-slider-video-icon {
+    width: 24px;
+    height: 24px;
+}
+.offer-photo-slider .offer-photo-slider-arrow {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    z-index: 2;
+    transition: opacity var(--transition-duration-short, 0) ease-in-out;
+}

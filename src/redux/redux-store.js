@@ -1,10 +1,10 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import ad_info from "./ad_info";
+import advertisement from "./advertisement";
 // import { reducer as formReducer } from 'redux-form'
 
 let reducer = combineReducers({
-    ad_info: ad_info
+    advertisement: advertisement
     // form: formReducer
 })
 

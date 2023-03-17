@@ -3,7 +3,7 @@ import Advertisement from "./Advertisement";
 
 let mapStateToProps = (state) => {
     return {
-        ad_info : state.ad_info
+        advertisement : state.advertisement
     }
 }
 
